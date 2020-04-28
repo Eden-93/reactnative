@@ -5,7 +5,7 @@ import { PARTNERS } from '../shared/partners';
 
 function Mission() {
     return (
-        <Card>
+        <Card title='Our Mission'>
             <Text>
                 We present a curated database of the best campsites in the vast woods
                 and backcountry of the World Wide Web Wilderness. We increase access to
@@ -32,7 +32,6 @@ class About extends Component {
     }
     
     render () {
-        //console.log(this.state.partners)
         const renderPartner = ({item}) => {
             return (
                 <ListItem
@@ -45,7 +44,7 @@ class About extends Component {
         return (
             <ScrollView>
                 <Mission/>
-                <Card featuredTitle='Community Partners'>
+                <Card title='Community Partners'>
                     <FlatList
                         data={this.state.partners}
                         keyExtractor={item => item.id.toString()}
